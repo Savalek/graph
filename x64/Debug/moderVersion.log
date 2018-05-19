@@ -1,0 +1,100 @@
+﻿  main.cpp
+  glsl.cpp
+c:\users\alex\desktop\computergraphics-master\computergraphics-master\snd module\personal2.phong\moderversion\moderversion\glsl.cpp(1351): warning C4244: инициализация: преобразование "std::streamoff" в "unsigned long", возможна потеря данных
+c:\users\alex\desktop\computergraphics-master\computergraphics-master\snd module\personal2.phong\moderversion\moderversion\glsl.cpp(1353): warning C4244: инициализация: преобразование "std::streamoff" в "unsigned long", возможна потеря данных
+  Создание кода...
+glsl.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_glewInit в функции "bool __cdecl cwc::InitOpenGLExtensions(void)" (?InitOpenGLExtensions@cwc@@YA_NXZ)
+glsl.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_glewGetExtension в функции "bool __cdecl cwc::HasGLSLSupport(void)" (?HasGLSLSupport@cwc@@YA_NXZ)
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewAttachShader"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewBindAttribLocation"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewCreateProgram"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewDeleteShader"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewDetachShader"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewGetProgramInfoLog"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewGetProgramiv"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewGetShaderiv"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewGetUniformLocation"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewGetUniformfv"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewGetUniformiv"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewLinkProgram"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform1f"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform1fv"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform1i"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform1iv"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform2f"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform2fv"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform2i"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform2iv"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform3f"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform3fv"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform3i"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform3iv"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform4f"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform4fv"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform4i"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform4iv"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniformMatrix2fv"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniformMatrix3fv"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniformMatrix4fv"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUseProgram"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttrib1d"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttrib1f"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttrib1s"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttrib2d"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttrib2f"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttrib2s"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttrib3d"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttrib3f"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttrib3s"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttrib4Nub"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttrib4d"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttrib4f"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttrib4s"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewCompileShaderARB"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewCreateShaderObjectARB"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewDeleteObjectARB"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewGetInfoLogARB"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewGetObjectParameterivARB"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewShaderSourceARB"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewGetAttribLocationARB"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewProgramParameteriEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewGetUniformuivEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform1uiEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform1uivEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform2uiEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform2uivEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform3uiEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform3uivEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform4uiEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewUniform4uivEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttribI1iEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttribI1uiEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttribI2iEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttribI2uiEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttribI3iEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttribI3uiEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttribI4iEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___glewVertexAttribI4uiEXT"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___GLEW_VERSION_1_2"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___GLEW_VERSION_1_3"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___GLEW_VERSION_1_4"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___GLEW_VERSION_1_5"
+glsl.obj : error LNK2001: неразрешенный внешний символ "__imp___GLEW_VERSION_2_0"
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ glutInit в функции main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ glutInitDisplayMode в функции main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ glutInitWindowPosition в функции main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ glutInitWindowSize в функции main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ glutMainLoop в функции main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ glutCreateWindow в функции main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ glutPostRedisplay в функции "void __cdecl Render(void)" (?Render@@YAXXZ)
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ glutSwapBuffers в функции "void __cdecl Render(void)" (?Render@@YAXXZ)
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ glutDisplayFunc в функции main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ glutReshapeFunc в функции main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ glutKeyboardFunc в функции main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ glutSpecialFunc в функции main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ glutSolidSphere в функции "void __cdecl Render(void)" (?Render@@YAXXZ)
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ SOIL_load_OGL_texture в функции "int __cdecl LoadGLTextures(void)" (?LoadGLTextures@@YAHXZ)
+C:\Users\Alex\Desktop\ComputerGraphics-master\ComputerGraphics-master\Snd Module\Personal2.Phong\moderVersion\moderVersion\lib\glew32.lib : warning LNK4272: тип компьютера библиотеки "X86" конфликтует с типом целевого компьютера "x64"
+C:\Users\Alex\Desktop\ComputerGraphics-master\ComputerGraphics-master\Snd Module\Personal2.Phong\moderVersion\moderVersion\lib\glut32.lib : warning LNK4272: тип компьютера библиотеки "X86" конфликтует с типом целевого компьютера "x64"
+SOIL.lib : warning LNK4272: тип компьютера библиотеки "X86" конфликтует с типом целевого компьютера "x64"
+C:\Users\Alex\Desktop\ComputerGraphics-master\ComputerGraphics-master\Snd Module\Personal2.Phong\moderVersion\x64\Debug\moderVersion.exe : fatal error LNK1120: неразрешенных внешних элементов: 91

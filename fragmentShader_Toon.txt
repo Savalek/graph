@@ -1,0 +1,34 @@
+varying vec3 N;
+varying vec3 v;  
+varying vec2 texture_coordinate; 
+
+uniform sampler2D my_color_texture;
+
+void main (void)  
+{  
+   gl_FragColor = gl_FrontLightModelProduct.sceneColor;
+   vec3 l;
+   const float edgePower = 1.0;
+   
+   for (int i = 0; i < 3; i++) {
+        l = gl_LightSource[i].position.xyz - v;
+        vec3  n2   = normalize ( N );
+        vec3  l2   = normalize ( l );
+        vec4  diffColor = gl_FrontLightProduct[i].diffuse;  
+        
+        float diff = 0.2 + max ( dot ( n2, l2 ), 0.0 );
+        vec4  clr;
+
+        if ( diff < 0.4 )
+            clr = diffColor * 0.3;
+        else
+        if ( diff < 0.7 )
+            clr = diffColor ;
+        else
+            clr = diffColor * 1.3;
+
+        gl_FragColor += clr;
+
+   }
+   //gl_FragColor *= texture2D(my_color_texture, texture_coordinate);
+}

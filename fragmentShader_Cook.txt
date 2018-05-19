@@ -1,0 +1,38 @@
+varying vec3 N;
+varying vec3 v;    
+varying vec2 texture_coordinate; 
+
+uniform sampler2D my_color_texture;
+
+void main (void)  
+{  
+   gl_FragColor = gl_FrontLightModelProduct.sceneColor;
+   vec3 l, h;
+   float r0 = 10.0, roughness = 1.01;
+   
+   for (int i = 0; i < 3; i++) {
+        l = gl_LightSource[i].position.xyz - v;
+        h = l + v;
+        vec3  n2   = normalize ( N );
+        vec3  l2   = normalize ( l );
+        vec3  v2   = normalize ( v );
+        vec3  h2   = normalize ( h );
+        float nh   = dot ( n2, h2 );
+        float nv   = dot ( n2, v2 );
+        float nl   = dot ( n2, l2 );
+        float d    = texture2D ( my_color_texture, vec2 ( roughness, nh ) ).x;
+        
+        float f    = mix ( pow ( 1.0 - nv, 5.0 ), 1.0, r0 );		// Fresnel
+        float x    = 2.0 * nh / dot ( v2, h2 );
+        float g    = min ( 1.0, min ( x * nl, x * nv ) );			// Geometry attenuation
+        float ct   = d*f*g / nv;
+    
+        vec4 Iamb = gl_FrontLightProduct[i].ambient;     
+        vec4 Idiff = gl_FrontLightProduct[i].diffuse * max(nl, 0.0);    
+        vec4 Ispec = gl_FrontLightProduct[i].specular 
+                    * max(ct,0.0);
+
+        gl_FragColor += Iamb + Idiff + Ispec;
+   }
+   //gl_FragColor *= texture2D(my_color_texture, texture_coordinate);
+}
