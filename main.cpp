@@ -63,36 +63,52 @@ void DrawCube(float sz)
 {
 	glBegin(GL_QUADS);
 	// передн€€ грань
+	glNormal3f(0.0, 0.0, -1.0);
 	glTexCoord2f(0.0f, 0.0f); glVertex3f(-sz, -sz, sz);
 	glTexCoord2f(1.0f, 0.0f); glVertex3f(sz, -sz, sz);
 	glTexCoord2f(1.0f, 1.0f); glVertex3f(sz, sz, sz);
 	glTexCoord2f(0.0f, 1.0f); glVertex3f(-sz, sz, sz);
+	glEnd();
 
+	glBegin(GL_QUADS);
 	// задн€€ грань
+	glNormal3f(0.0, 0.0, 1.0);
 	glTexCoord2f(1.0f, 0.0f); glVertex3f(-sz, -sz, -sz);
 	glTexCoord2f(1.0f, 1.0f); glVertex3f(-sz, sz, -sz);
 	glTexCoord2f(0.0f, 1.0f); glVertex3f(sz, sz, -sz);
 	glTexCoord2f(0.0f, 0.0f); glVertex3f(sz, -sz, -sz);
+	glEnd();
 
+	glBegin(GL_QUADS);
 	// верхн€€ грань
+	glNormal3f(0.0, -1.0, 0.0);
 	glTexCoord2f(0.0f, 1.0f); glVertex3f(-sz, sz, -sz);
 	glTexCoord2f(0.0f, 0.0f); glVertex3f(-sz, sz, sz);
 	glTexCoord2f(1.0f, 0.0f); glVertex3f(sz, sz, sz);
 	glTexCoord2f(1.0f, 1.0f); glVertex3f(sz, sz, -sz);
+	glEnd();
 
+	glBegin(GL_QUADS);
 	// нижн€€ грань
+	glNormal3f(0.0, 1.0, 0.0);
 	glTexCoord2f(1.0f, 1.0f); glVertex3f(-sz, -sz, -sz);
 	glTexCoord2f(0.0f, 1.0f); glVertex3f(sz, -sz, -sz);
 	glTexCoord2f(0.0f, 0.0f); glVertex3f(sz, -sz, sz);
 	glTexCoord2f(1.0f, 0.0f); glVertex3f(-sz, -sz, sz);
+	glEnd();
 
+	glBegin(GL_QUADS);
 	// парва€ грань
+	glNormal3f(-1.0, 0.0, 0.0);
 	glTexCoord2f(1.0f, 0.0f); glVertex3f(sz, -sz, -sz);
 	glTexCoord2f(1.0f, 1.0f); glVertex3f(sz, sz, -sz);
 	glTexCoord2f(0.0f, 1.0f); glVertex3f(sz, sz, sz);
 	glTexCoord2f(0.0f, 0.0f); glVertex3f(sz, -sz, sz);
+	glEnd();
 
+	glBegin(GL_QUADS);
 	// лева€ грань
+	glNormal3f(1.0, 0.0, 0.0);
 	glTexCoord2f(0.0f, 0.0f); glVertex3f(-sz, -sz, -sz);
 	glTexCoord2f(1.0f, 0.0f); glVertex3f(-sz, -sz, sz);
 	glTexCoord2f(1.0f, 1.0f); glVertex3f(-sz, sz, sz);
@@ -109,21 +125,27 @@ void Init() {
 	shader->setUniform1ui("my_color_texture", 0);
 
 	lights[0].position = new float[4]{ 0.0f, -100.0f, 200.0f, 1.0f };
-	lights[1].position = new float[4]{ -150.0f, 0.0f, 200.0f, 1.0f };
+	lights[1].position = new float[4]{ 0.0f, 0.0f, 300.0f, 1.0f };
 	lights[2].position = new float[4]{ 150.0f, 0.0f, 200.0f, 1.0f };
 
 	lights[0].isActive = true;
 	for (int i = 0; i < lights_count; i++) {
-		lights[i].ambient = new float[4]{ 0.0f, 0.0f, 0.0f, 1.0f };
-		lights[i].diffuse = new float[4]{ 191.0f / 256, 249.0f / 256, 253.0 / 256, 1.0f };
-		lights[i].specular = new float[4]{ 0.8f, 1.0f, 1.0f, 1.0f };
+		lights[i].ambient = new float[4]{ 0.1f, 0.1f, 0.f, 1.0f };
 	}
 
-	material.ambient = new float[4]{ 190.0 / 256, 190.0 / 256, 190.0 / 256, 1.0 };
-	material.diffuse = new float[4]{ 190.0 / 256, 190.0 / 256, 190.0 / 256, 1.0 };
-	material.specular = new float[4]{ 190.0 / 256, 190.0 / 256, 190.0 / 256, 1.0 };
+	lights[0].specular = new float[4]{ 1, 1, 1, 1.0f };
+	lights[1].specular = new float[4]{ 0, 1, 0, 1.0f };
+	lights[2].specular = new float[4]{ 1, 0, 0, 1.0f };
+	lights[0].diffuse = new float[4]{ 1, 1, 1, 0.1f };
+	lights[1].diffuse = new float[4]{ 0, 1, 0, 0.1f };
+	lights[2].diffuse = new float[4]{ 1, 0, 0, 0.1f };
+
+
+	material.ambient = new float[4]{ 190.0 / 256, 190.0 / 256, 190.0 / 256, 0.1f };
+	material.diffuse = new float[4]{ 190.0 / 256, 190.0 / 256, 190.0 / 256, 1.0f };
+	material.specular = new float[4]{ 190.0 / 256, 190.0 / 256, 190.0 / 256, 1.0f };
 	material.emission = new float[4]{ 0.0f, 0.0f, 0.0f, 0.0f };
-	material.shininess = 0.5f * 128;
+	material.shininess = 32.0f;
 
 	shader = shader_manager.loadfromFile(vertexShader, fragmentShader);
 	if (shader == 0)
@@ -132,13 +154,19 @@ void Init() {
 
 void RecalcLight() {
 	for (int i = 0; i < lights_count; i++) {
+		unsigned light_ind = GL_LIGHT0 + i;
 		if (lights[i].isActive) {
-			unsigned light_ind = GL_LIGHT0 + i;
-			glEnable(light_ind);
 			glLightfv(light_ind, GL_POSITION, lights[i].position);
 			glLightfv(light_ind, GL_AMBIENT, lights[i].ambient);
 			glLightfv(light_ind, GL_DIFFUSE, lights[i].diffuse);
 			glLightfv(light_ind, GL_SPECULAR, lights[i].specular);
+		}
+		else {
+			float *off = new float[4]{0, 0, 0, 0};
+			glLightfv(light_ind, GL_POSITION, off);
+			glLightfv(light_ind, GL_AMBIENT, off);
+			glLightfv(light_ind, GL_DIFFUSE, off);
+			glLightfv(light_ind, GL_SPECULAR, off);
 		}
 	}
 
@@ -274,7 +302,6 @@ void keyboard(unsigned char key, int x, int y)
 
 int main(int argc, char ** argv) {
 	glutInit(&argc, argv);
-	
 	glutInitWindowSize(800, 600);
 	glutInitWindowPosition(100, 100);
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
